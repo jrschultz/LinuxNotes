@@ -1,0 +1,5 @@
+du -h | sort -h
+
+Disk usage in human readable form, sorted by human readable file size.
+
+

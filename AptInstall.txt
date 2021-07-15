@@ -1,0 +1,9 @@
+sudo apt install gparted texlive-full texlive-lang-all texlive-luatex texlive-xetex texlive-fonts-extra pandoc musescore3 vlc vim-gtk gimp kdeconnect mpv asunder handbrake openssh-server ranger hunspell-en-ca git htop zsh 
+
+
+Non-Repo Apps:
+==============
+Brave 
+Imaginary Teleprompter
+Image-Magick
+

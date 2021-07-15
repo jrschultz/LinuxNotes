@@ -1,0 +1,38 @@
+Linux Tricks
+Server Name: kryptos 
+SSH Keygen
+ssh-keygen -t rsa -b 4096
+save in the default location, password protect if you want
+To share the public key to the server:
+ssh-copy-id USER@IP ADDRESS
+example: ssh-copy-id falcon@10.0.1.40
+
+If you need to delete a key from the known_hosts file
+# ssh-keygen -H  -F <hostname or IP address>
+
+Samba Setup
+1) Add User to the Samba User List, password must be the same as linux login
+sudo smbpasswd -a USERNAME
+2) Make the directory you want to share and then change its permissions
+sudo chmod 775 /SHAREDFOLDER
+3) Edit the samba config file and add the info for the folder you want to share
+sudo nano /etc/samba/smb.conf
+Scroll to the bottom
+[SHAREDFOLDER]
+ path = /home/USER/SHAREDFOLDER
+ browseable = yes
+ read only = no
+ valid users = USER
+4) Check for any errors
+testparm /etc/samba/smb.conf
+i3
+bindsym $mod+shift+x exec i3lock —color “$bg-color” or whatever color you want
+exec_always feh —bg-scale /absolute/path/to/wallpaper
+Yosemite San Francisco font
+Mv *.ttf ~/.fonts
+
+To Get SSH running:
+sudo apt install openssh-server
+
+systemctl start sshd
+

@@ -1,0 +1,94 @@
+Installing on Ubuntu
+sudo apt install zfsutils-linux 
+In addition to be able to have ZFS on root, install: 
+ sudo apt install zfs-initramfs
+df -h to see the system info
+
+Create a Pool
+zpool create [ Name of pool] [ what kind] disk1 disk2
+Ex: zpool create BigPool mirror disk1 disk2
+
+Add to a pool
+zpool add BigPool mirror disk3 disk4
+
+See Status
+zpool status
+
+Segment/Partition a pool
+zfs create BigPool/data
+zfs create BigPool/apps
+
+Destroy/take apart a pool
+zpool destroy BigPool
+
+May have to export the pool first, then destroy it. If it has trouble unmounting, ensure nothing is connected to it or even a shell in the same directory.
+sudo zpool export [POOLNAME]
+
+Create RAID pool
+zpool create BigPool raidz disk1 disk2 disk3 disk4
+
+Should create by stable id such as serial numbers
+/dev/disk/by-id/ata-HGST345k34j4
+
+Run this: ls -la /dev/disk/by-uuid/
+
+sudo zpool create [POOLNAME] raidz1 /dev/disk/by-id/asdlfasdlfjafjsa;lk (x how many drives you want to add)
+
+Raid Options
+Mirror 
+Raidz1
+Raidz2
+Raidz3
+
+Locate a bad disk
+sudo hdparm -I /dev/sd?
+Can also pipe to grep
+sudo hdparm - I /dev/sd? | grep ’Serial'
+
+Replace a bad disk in a pool
+zpool replace -f BigPool disk4 disk9
+* use the -f option to force it and
+
+Take bad disk out of the pool
+zpool offline BigPool disk8
+
+Readd to the pool
+zpool online BigPool disk8 (or whatever the name of the disk is)
+
+Setting Quotas in sets
+zfs set quota=100M BigPool/data/jacob
+
+This can be changed anytime. It’s a logical volume not a physical
+
+Reserving space
+zfs set reservation=100M BigPool/data/matthew 
+
+See settings
+zfs get all BigPool/data
+
+Changing Permissions
+sudo chown -R [USERNAME] /[ZPOOL]
+
+To Share with Samba
+sudo zfs set sharesmb=on [POOLNAME/FOLDER]
+
+Ensure the user is added to the samba server on the OS
+1) Add User to the Samba User List, password must be the same as linux login
+sudo smbpasswd -a USERNAME
+
+Maintenance: 
+sudo zpool scrub jcloud
+Note: This verifies all checksums and fixes any files that fail
+
+zpool scrub -s myPool
+Note: this stops a scrub (they can take a long time)
+
+My ZFS Setup Steps:
+
+1. sudo apt install zfsutils-linux
+2. sudo zpool create jcloud -f -o ashift=12 raidz1 /dev/sdb /dev/sdc /dev/sdd ...
+*    Note: -f is to force it if data is already present. 
+*    Note: -o ashift=12 advanced format for disks after 2011, uses 4096 byte sectors
+3. zpool export jcloud
+4. zpool import jcloud -d /dev/disk/by-id
+        Note: this ensures the pool disks are by unique disk identifiers not generic /sda …

@@ -1,0 +1,16 @@
+Arch Linux package manager commands
+
+sudo pacman 
+-S PACKAGENAME install package
+
+-R PACKAGENAME remove package
+
+-Rs PACKAGENAME remove package & all unneeded dependencies 
+
+-Ss PACKAGENAME searches repositories for the package
+
+-Qs PACKAGENAME searches local machine for the package
+
+-Qdt shows all orphaned packages on local machine
+
+-Rns $(pacman -Qtdq) removes all orphaned packages on local machine

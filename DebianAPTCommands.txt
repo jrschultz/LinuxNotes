@@ -1,0 +1,19 @@
+Advanced Package Tool apt
+
+package name -version to see what version you have installed
+
+sudo apt update/upgrade
+
+sudo apt install (install new packages)
+
+sudo apt remove [PACKAGENAME] - remove packages (but not config files and extras)
+
+sudo apt purge [PACKAGENAME] - obliterates everything about the package
+
+sudo apt autoremove - removes all old dependencies 
+
+apt search [PACKAGENAME] - look for packages
+
+apt show [PACKAGENAME] - show lots of detail about a package
+
+sudo apt edit-sources - edits the /etc/apt/sources.list file

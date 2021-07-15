@@ -1,0 +1,31 @@
+This is to get a list of all the visits from the visitation iCal. It exports the results to a text file
+
+1. Export the iCal calendar file
+2. egrep -i 'DTSTART|SUMMARY' Visits.ics > Visits.txt
+3. egrep -i '2019|SUMMARY'  Visits.txt > 2019Vis.txt
+4. grep -i -B 1 '2019' 2019Vis.txt
+
+Note: ‘DTEND’ is the date end of the event and hence the day it happened. SUMMARY includes the person’s name.
+
+3. egrep -i -C2 'funeral' Parish.ics > Funerals.txt 
+Gives the funerals with the dates
+
+4. egrep -i 'DTSTART|SUMMARY' Parish.ics > Parish.txt
+
+
+How to Generate Visitation Reports
+2. Export the iCal calendar file
+3. egrep -i '2019|SUMMARY' Visits.ics > 2019Visits.txt
+4. grep -i -B 1 '2019’ 2019Visits.txt > 2019Vis.txt
+
+
+
+*** NEW Generate Visit Reports - using VISIT in the event name ***
+1. Export the iCal Visits calendar
+2. egrep 'VISIT' Visits.ics > Visits.txt
+
+
+How the iCal is appointed for gripping:
+1. VISIT 20191217 GLADYS HOLITSKI SHUT-IN
+2. HEALTH 20200109 ETHAN DENTIST
+

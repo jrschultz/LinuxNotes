@@ -1,0 +1,52 @@
+######
+#iMAC#
+######
+schultz@192.168.50.72:/Users/schultz/Public
+########
+#Server#
+########
+jason@192.168.50.132:/mnt/4TB/Movies
+ssh jason@192.168.50.132
+jason@192.168.50.132/home/jason/Public
+jason@192.168.50.132:/mnt/4TB/SCRATCH
+jason@192.168.50.132:/jcloud/
+jason@192.168.50.132:/home/jason/Files
+jason@192.168.50.132:/mnt/temp
+**Back Up iTunes to Server**
+rsync -havP /Volumes/STORAGE2/iTunes/ jason@192.168.50.132:/jcloud/iTunes
+####
+#Pi#
+####
+ssh pi@192.168.50.111
+##########
+#ThinkPad#
+##########
+@@@@@@@@@
+@mintpad@
+@@@@@@@@@
+jason@192.168.50.90:/home/jason/Public
+rsync -havP /Volumes/STORAGE2/Documents/FDGC/ jason@192.168.50.90:/home/jason/Documents/FDGC
+rsync -havP /Volumes/STORAGE2/Documents/SMCAC/ jason@192.168.50.90:/home/jason/Documents/SMCAC
+rsync -havP /Volumes/STORAGE2/Documents/SMCWF/ jason@192.168.50.90:/home/jason/Documents/SMCWF
+rsync -haP /Volumes/STORAGE2/SPSJ/03-Governance/ jason@192.168.50.90:/home/jason/Documents/church/03-Governance
+@@@@@@
+@ MX @
+@@@@@@
+ssh jason@192.168.50.200:/home/jason/Documents
+Sync FDGC
+rsync -havP --delete /Volumes/STORAGE2/Documents/FDGC/ jason@192.168.50.200:/home/jason/Documents/FDGC
+rsync -aP --delete /Volumes/STORAGE2/SPSJ/Education/Confirmation/ConfirmationONE/SessionsCHRONO/ jason@192.168.50.200:/home/jason/Documents/SessionsCHRONO
+rsync -aP --delete /Volumes/STORAGE2/Documents/SMCAC/ jason@192.168.50.200:/home/jason/Documents/SMCAC
+rsync -havP --delete /Volumes/STORAGE2/SPSJ/Governance/ jason@192.168.50.200:/home/jason/Documents/Church/Governance
+Sync Homemovies
+rsync -havEP /Volumes/STORAGE2/iTunes/iTunes\ Media/Home\ Videos/ /Volumes/BACKUP2/iTunes/iTunes\ Media/Home\ Videos 
+DEBIAN:
+ssh jason@192.168.50.115
+jason@192.168.50.115:/home/jason/Documents
+Backup Confirmation
+rsync -aP --delete /Volumes/STORAGE2/SPSJ/Education/Confirmation/ConfirmationONE/SessionsCHRONO/ jason@192.168.50.115:/home/jason/Documents/SessionsCHRONO
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Syncing STORAGE1 —> Server
+rsync -havP --delete -n /Volumes/STORAGE1/Lightroom/ jason@192.168.50.132:/mnt/4TB/Lightroom
+rsync -havP --delete -n /Volumes/STORAGE1/PHOTOS/ jason@192.168.50.132:/mnt/4TB/PHOTOS
+ 	q

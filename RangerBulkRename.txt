@@ -1,0 +1,11 @@
+:bulkrename 
+
+Vim Buffer
+
+:%s/find/replace/g
+
+Spaces Elimination
+:%s/\ //g
+
+Wildcard for removing crap from filenames
+:%s/(chicken butt monkey ......_)//g

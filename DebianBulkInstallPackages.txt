@@ -1,0 +1,14 @@
+# Backup a list of installed packages for when you install a clean distro
+# From video: 13 Create a Backup List of Installed Packages dpkg apt on your Debian Linux System 
+# Kris Occhipinti
+
+On existing system to generate the list of installed packages:
+dpkg --get-selections | grep -v deinstall > packages.txt
+
+On new clean system:
+sudo apt install dselect
+
+To filter out the word "install" which is in the second column:
+sudo apt install $(cat packages.txt) | awk '{print $1}') -y
+
+

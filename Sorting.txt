@@ -1,0 +1,20 @@
+sort sample.txt - sorts data into groups
+
+uniq sample.txt - shows only unique entries
+
+uniq -d sample.txt - shows only duplicate entries
+
+grep Linux sample.txt  -searches for Linux in a file, like a fuzzy search
+
+grep -w Linux sample.txt -searches “Linux” only, like a strict search
+
+grep -A 3 Linux sample.txt -searches with 3 lines of context after the word
+
+grep -C like a word count for instances
+
+wc -l sample.txt - counts lines
+-w - counts words
+-m - counts characters 
+
+
+sort -d textile.txt | uniq > updatedlist.txt

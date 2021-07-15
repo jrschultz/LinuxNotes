@@ -1,0 +1,10 @@
+#Convert from ogg to m4a in a folder
+
+for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done
+
+
+#Convert and delete original
+
+for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done && rm *.ogg
+
+

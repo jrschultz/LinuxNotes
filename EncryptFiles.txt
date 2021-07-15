@@ -1,0 +1,7 @@
+openssl aes-256-cbc -in FILE -out ENCRYPTED 
+
+Decrypt
+openssl aes-256-cbc -d -in ENCRYPTED -out FILE
+
+Symmetric encryption 
+American Encryption Standard cipher block chain 

@@ -1,0 +1,23 @@
+(`sudo` omitted for brevity) 
+1:08 `pacman -S {pkg}` install {pkg} 
+1:45 `pacman -Syu` update package database and upgrade installed packages 
+2:08 `pacman -Sy` update package database 
+2:32 `pacman -Su` upgrade installed packages 
+3:05 `pacman -Syy` force update of package database even if recently updated 
+3:32 `pacman -Syyuw` download programs but leave them uninstalled (for manual install) 
+3:55 `pacman -Syu` equivalent to Debian `sudo apt-get update && sudo apt-get upgrade` 
+5:06 `pacman -R {pkg}` remove package {pkg} 
+5:34 `pacman -Rs` remove package as well as unneeded dependencies 
+6:17 `pacman -Rns` remove package, dependencies, and system config files (recommended for all package uninstallations) 
+7:00 `pacman -Q` display all installed packages 
+7:30 `pacman -Q | wc -l` display total number of installed packages by counting lines of output 
+8:03 `pacman -Qe` display only packages explicitly installed 
+8:45 `pacman -Qeq` display only names of explicitly installed packages, and not version numbers ("quiet") 
+9:13 `pacman -Qn` display only packages installed from main repositories 
+9:25 `pacman -Qm` display only packages installed from AUR 
+9:45 `pacman -Qdt` display orphaned dependencies 
+11:20 `pacman -Ss` search remote repository for package 
+11:30 `pacman -Qs` search local repository for package 
+11:45 editing pacman.conf...﻿
+Sudo pacman -Sc (remove all old version packages)
+https://youtu.be/-dEuXTMzRKs

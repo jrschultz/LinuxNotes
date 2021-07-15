@@ -1,0 +1,1 @@
+qrencode -s 20 *"Hello friend! The way forward is hidden within the geojibbygps.png image. The password is in the cache title. Good luck!"* -o qrcode.png 

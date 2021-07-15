@@ -1,0 +1,54 @@
+rsync Command
+-Just drag and drop the source & destination to the terminal window
+ - A trailing slash on the source changes this behavior to avoid  creating
+       an  additional  directory level at the destination.  You can think of a
+       trailing / on a source as meaning "copy the contents of this directory"
+       as  opposed  to  "copy  the  directory  by name", but in both cases the
+       attributes of the containing directory are transferred to the  contain-
+       ing  directory on the destination.  In other words, each of the follow-
+       ing commands copies the files in the same way, including their  setting
+       of the attributes of /dest/foo:
+              rsync -av /src/foo /dest
+              rsync -av /src/foo/ /dest/foo
+For Copying additions only:
+rsync -avhEP [SOURCE FOLDER]/ [DESTINATION FOLDER]
+For Exact Clone/Synced:
+rsync -avhEP --delete [SOURCE FOLER]/ [DESTINATION FOLDER]
+-a = archive mode
+-v = verbose
+-h = human readable
+-E = extended attributes for resource forks (OS X Only)
+-P = progress
+ 	•	Should always have -aE for sure
+***To do a Dry-Run and make sure everything is right before you run it:***
+rsync -aE --progress  --dry-run [SOURCE FOLDER]/ [DESTINATION FOLDER]
+For network transfer to servers use:
+ 	rsync -zaP [SOURCE FOLDER]/ schultz@10.0.1.7:[DESTINATION FOLDER]
+rsync -zaEP schultz@10.0.1.7:/Volumes/STORAGE2/Documents /run/media/geojibby/1TB
+From Mac to Linux:
+rsync -zaP /Volumes/STORAGE2/LRBackups geojibby@10.0.1.35:/mnt/1TB
+geojibby@192.168.50.132:/home/geojibby/Public 
+rsync -zaP --dry-run /Volumes/STORAGE2/iTunes geojibby@192.168.50.132:/mnt/2TB
+For directories with spaces in their names:
+rsync -zaP /Volumes/STORAGE2/iTunes/iTunes?Media/Home?Videos/ mxninja@192.168.50.132:/mnt/2TB/iTunes/iTunes?Media/Home?Videos
+rsync -zaP --dry-run /Volumes/STORAGE2/Documents/ mxninja@192.168.50.132:/mnt/2TB/Documents
+rsync -zaP --dry-run /Volumes/STORAGE2/iTunes/ mxninja@192.168.50.132:/mnt/2TB/iTunes
+rsync -zaP --dry-run /Volumes/STORAGE2/LRBackups/ mxninja@192.168.50.132:/mnt/2TB/LRBackups
+rsync -zaP --dry-run /Volumes/STORAGE2/SPSJ/ mxninja@192.168.50.132:/mnt/2TB/SPSJ
+rsync -zaP --dry-run /Volumes/STORAGE2/Vid2Process/ mxninja@192.168.50.132:/mnt/2TB/Vid2Process
+rsync -zaP /Volumes/LiveWork/EDITS/Shawna/ShawnaFinal/ mxninja@192.168.50.132:/mnt/2TB/SCRATCH/ShawnaFinal
+rsync -zaP /Volumes/LiveWork/20180625?Byers mxninja@192.168.50.132:/mnt/2TB/SCRATCH/
+rsync -zaP /Volumes/LiveWork/20180626?Cooley mxninja@192.168.50.132:/mnt/2TB/SCRATCH/
+rsync -zaP /Volumes/LiveWork/20180716?Grandy mxninja@192.168.50.132:/mnt/2TB/SCRATCH/
+rsync -havEP /Volumes/STORAGE2/iTunes/iTunes\ Media/Home\ Videos/ /Volumes/BACKUP2/iTunes/iTunes\ Media/Home\ Videos 
+
+For Cronnix to make the rsync script run silently
+in the command window have 
+
+/bin/sh 
+
+RSYNC using SSH
+rsync [OPTIONS]  [SOURCE] jason@192.168.50.132:/jcloud/Archive/ThinkPad
+
+RSYNC excluding directory
+rsync -havP /Users/schultz/Desktop/Source/ --exclude=/ExcludeMe /Users/schultz/Desktop/Destination

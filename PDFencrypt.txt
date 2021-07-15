@@ -1,0 +1,5 @@
+Use pdftk program to add a password to a PDF file.
+
+pdftk [input file to encrypt] 20201209-JDavidsonContract.pdf output contract.pdf owner_pw contract user_pw emmanuel allow printing
+
+Owner password and user password must be different.

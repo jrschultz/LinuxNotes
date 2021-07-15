@@ -1,0 +1,57 @@
+TAR is like a shopping bag to gather files together, it does not compress any data.
+
+To create a TAR archive:
+
+tar -cvf [NAMEOFARCHIVE.tar]
+
+Options: c= create an archive  v= verbose f=create a new file
+
+To view the TAR contents:
+
+tar -tf [NAMEOFARCHIVE.tar]
+
+To restore a TAR archive:
+
+tar -xvf [NAMEOFARCHIVE.tar]
+
+
+Adding Compression
+
+To compress:
+gzip [NAMEOFARCHIVE.tar]
+
+To uncompress: 
+gunzip [NAMEOFARCHIVE.tar]
+
+**NOTE** - There is no practical gain on compressing RAW files (NEFs, RAFs, etc).
+
+
+To do both in one step:
+compress & tar:
+
+tar -cvzf [NAMEOFARCHIVE.tar]
+
+uncompress:
+tar -xvzf [NAMEOFARCHIVE.tar.gz]
+
+To make a multi-volume tar file for archiving across Blu-Rays:
+
+tar -ML 1048576 -cvf my-archive.tar source-file-or-folder 
+
+Options: -M is multi-volume -L is the “length of tape” meaning the desired file size in KB. 1048576 is one GB in KB.
+
+25GB - 26214400KB
+24GB - 25165824KB
+23GB - 24117248KB
+22GB - 23068672KB
+8GB - 8388608KB
+
+After Tar makes the first archive of the specified size, it gives a prompt. Use ’n’ option for the name of the next archive.
+
+https://www.gnu.org/software/tar/manual/html_node/Multi_002dVolume-Archives.html
+
+To view a multi-volume “slice”:
+tar -Mtf YourTarArchive1.tar
+
+To restore the multi-volume archive:
+tar -Mxvf YourTarArchive1.tar

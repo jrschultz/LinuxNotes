@@ -1,0 +1,11 @@
+tree --du -h > 2011tree.txt
+
+tree to list out a directory contents 
+--du each directory report its size as the accumulation of sizes of  all  its  files  and  sub-directories
+-h human readable file sizes
+
+output to a text file
+
+Quick List of Disk Usage for directories with output to a text file
+
+du -h -d 1 > 2019.txt

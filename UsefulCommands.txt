@@ -1,0 +1,47 @@
+df -h 
+* displays filesystem disk space usage for all partitions.
+free -m 
+* displays the amount of free and used memory in the system.
+uname -a 
+* prints all system information, including machine name, kernel name, version, and a few other details.
+lsb_release -a 
+* prints version information for the Linux release you're running. 
+ifconfig 
+* reports on your system's network interfaces.
+
+iwconfig 
+* shows you any wireless network adapters and the wireless-specific information from them, such as speed and network connected.
+
+Harware info commands:
+    * lspci: The lspci command lists all PCI buses and devices connected to them. This commonly includes network cards and sound cards.
+ 
+    * lsusb: The lsusb command lists all USB buses and any connected USB devices, such as printers and thumb drives.
+ 
+    * lshal: The lshal command lists all devices the hardware abstraction layer (HAL) knows about, which should be most hardware on your system.
+ 
+    * lshw: The lshw command lists hardware on your system, including maker, type, and where it is connected.
+Lsblk - list the hard drive/devices 
+
+
+grep
+ search for text in a file
+
+sed 
+* allows search and replace of a particular string in a file. For example, if you want to find the string "cat" and replace it with "dog" in a file named pets, type 
+sed s/cat/dog/g pets.
+
+Dealing with Users and Groups
+
+You can use the following commands to administer users and groups.
+    * adduser: The addusercommand creates a new user. To create a new user, simply type sudo adduser $loginname. This creates the user's home directory and default group. It prompts for a user password and then further details about the user.
+ 
+    * passwd: The passwdcommand changes the user's password. If run by a regular user, it will change his or her password. If run using sudo, it can change any user's password. For example, sudo passwd joe changes Joe's password.
+ 
+    * who: The who command tells you who is currently logged into the machine.
+ 
+    * addgroup: The addgroupcommand adds a new group. To create a new group, type sudo addgroup $groupname.
+ 
+    * deluser: The delusercommand removes a user from the system. To remove the user's files and home directory, you need to add the 
+-remove-home option.
+ 
+    * delgroup: The delgroup command removes a group from the system. You cannot remove a group that is theo primary group of any users.

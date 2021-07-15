@@ -1,0 +1,57 @@
+Most Used Keyboard Shortcuts
+
+t
+tag toggle
+g n
+new tab
+TAB
+next tab
+q
+quit tab
+d D
+delete
+d d
+cut
+y y
+yank / copy
+p p
+paste
+p o
+paste overwrite
+a
+rename
+g h
+go home
+/
+search
+S
+open shell
+r
+open with …
+E
+edit
+d c
+count the size
+[
+move up in the parent directory
+]
+move down in the parent directory
+'
+bookmarks
+``
+last directory bookmark
+z h
+toggle show hidden files
+o r
+sort reverse
+o m
+sort by mtime
+o n
+sort natural / by name
+R
+reload this directory
+SPACE
+select under cursor
+v
+invert selection / select all
+

@@ -1,0 +1,11 @@
+(date && script/command) | tee -a mylog.log
+example: (date && rsync -havP /home/jason/LOTR/ /home/jason/deleteme) | tee -a mylog.log
+
+Customize the date command
+example:
+(date "+%Y-%m-%d %H:%M:%S" && rsync -havP /home/jason/LOTR/ /home/jason/deleteme) | tee -a mylog.log
+
+
+Use grep to look for a string in the log
+
+grep 'Mon Feb 25' /home/jason/mylog.log

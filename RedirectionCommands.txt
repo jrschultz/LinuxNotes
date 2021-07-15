@@ -1,0 +1,7 @@
+> - Redirects output 
+>> - append info
+2> - redirect error
+&> - redirect both
+/dev/null - discard
+cat - to handle input
+

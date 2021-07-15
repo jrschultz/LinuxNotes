@@ -1,0 +1,51 @@
+For Pi-Hole
+To update/upgrade: 
+pihole -up
+ssh pi@192.168.50.111
+
+
+sudo raspi-config
+
+sudo hostnamectl set-hostname raspberrywhatever
+
+change default password
+passwd username (ubuntu)
+
+For the Print Server
+Using RaspberryPi [Debian] lite (32-bit)
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install cups
+
+sudo usermod -a -G lpadmin pi
+
+sudo cupsctl --remote-any - - remote-admin - - shareprinters
+
+Sudo reboot
+
+sudo /etc/init.d/cups restart
+
+sudo apt install samba
+
+sudo nano /etc/samba/smb.conf
+    [printers]
+    guest ok = yes
+save and exit
+
+hostname -I (ip a)
+
+reboot pi
+
+Then plug in printers
+
+In a web browser goto pi IP address with :631 on the end. 192.168.50.170:631
+
+In CUPS, click administration tab, then add printer.
+Sign in with print-pi user name and password (ubuntu:ubuntu unless changed)
+
+Click on the printer and setup the details
+Click Share this Printer
+Select the right printer driver
+
+Add the wireless printer to the other computers on the network

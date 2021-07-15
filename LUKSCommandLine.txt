@@ -1,0 +1,9 @@
+Opening the encrypted volume
+
+lsblk 
+sudo cryptsetup luksOpen /dev/sdb1 sdb1 
+sudo mount /dev/mapper/sdb1 /mnt/[MOUNTPOINT] 
+
+sudo umount /dev/mapper/sdb1 
+sudo cryptsetup luksClose sdb1
+

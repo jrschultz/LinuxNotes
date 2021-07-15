@@ -1,0 +1,13 @@
+Vim screwed up bullet formatting
+gqq for a single line
+ggVGgqq for whole document
+see formatting: set list / set no list
+Spell Check F6, then [s to move to next word.
+
+Vim spell check
+: set spell!
+]s to advance to misspelled words
+[s to go back
+Z= to get suggestion menu
+Zg to add to dictionary 
+Zug to remove added word

@@ -1,0 +1,28 @@
+# adb tools for android phones/tablets
+#
+# Used the following steps to fuse a microSD card into the internal memory of the kids tablets when the software won't allow the option to do it.
+
+# Install android-tools-adb 
+
+1. adb shell
+as you can see my device has been detected :) !
+2. sm list-disks
+In my case it is 179, 128. Your case it would be different :)
+
+3. sm list-volumes all
+Ok so my sd card is not mounted with the internal storage !
+
+4. sm set-force-adoptable true
+
+5. sm partition disk:179,128 private (In my case it is 179,128) Your case it would be different. 
+
+Now this process will take some time . It will take atleast 5 to 10 minutes :) 
+After the complition of this process, now type:
+
+6. sm set-force-adoptable false
+
+Now to check that your sd card has been formated as internal or not, type:
+
+7: sm list-volumes all
+As you can see Sd card has been mounted Successfully :) 
+

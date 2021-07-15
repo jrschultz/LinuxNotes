@@ -1,0 +1,8 @@
+sudo wipefs - -all /dev/sdX where x is your drive letter 
+
+Add partition table 
+sudo cfdisk /dev/sdX
+
+Add partition
+sudo mkfs.vfat -n ‘label’ /dev/sdX1
+sudo mkfs.ext4 /dev/sdX1

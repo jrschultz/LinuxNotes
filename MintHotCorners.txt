@@ -1,0 +1,3 @@
+# MacOS style hot corner to log out command
+
+cinnamon-session-quit

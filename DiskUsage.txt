@@ -1,0 +1,6 @@
+du -hsc /home/*
+
+runs a command to see “disk usage” estimating file & directory size
+PATH/* gives a wildcard sum of all dirs in the path 
+
+Can install ncdu app which is like a ghetto navigator for file sizes
