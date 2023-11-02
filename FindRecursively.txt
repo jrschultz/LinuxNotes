@@ -1,0 +1,10 @@
+Use Find to find a bunch of files recursively in a directory and copy those files to a folder.
+
+
+find . -iname "*.pdf" -type f -exec cp {} ./pdfsfolder \;
+
+For .pages documents
+
+find . -iname "*.pages" -type d -exec cp -r {} ./pagesfiles \;
+
+Pages documents show up as directories on linux. Hence the switch to the type d for directory

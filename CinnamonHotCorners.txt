@@ -1,0 +1,8 @@
+Top Right
+Run a Command
+cinnamon-screensaver-command -a
+activation delay 250ms
+
+Bottom Right 
+Show the Desktop
+activation delay 0

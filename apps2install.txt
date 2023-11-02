@@ -3,7 +3,7 @@ Programs to install after fresh installation. Some might be already installed in
 Essentials:
 ===========
 
-vim vim-gtk  rsync curl git  pandoc texlive-full texlive-lang-all texlive-luatex texlive-xetex texlive-fonts-extra zsh ranger youtube-dl gparted openssh-server imagemagick htop neofetch mpv ffmpeg kdeconnect musescore3 handbrake vlc samba gnome-disk-utility libreoffice gimp hunspell-en-ca 
+vim vim-gtk  rsync curl git  pandoc texlive-full texlive-lang-all texlive-luatex texlive-xetex texlive-fonts-extra zsh ranger youtube-dl gparted openssh-server imagemagick htop neofetch mpv atom ffmpeg kdeconnect Musescore3 handbrake vlc samba gnome-disk-utility libreoffice gimp hunspell-en-ca 
 
 Fonts:
 ======
@@ -22,4 +22,3 @@ Other sources:
 ==============
 Imaginary Teleprompter
 Image-Magick
-Atom

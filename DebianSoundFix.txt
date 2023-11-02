@@ -1,0 +1,18 @@
+Had this weird issue where pulse audio wasn't defaulting to HDMI for the speakers in the TV.
+
+set it up properly through the pulse audio audio mixer applet.
+top right tabs to Configuration and select Digital Stereo (HDMI) Output
+
+Then in terminal run
+pacmd list-sinks | grep -A1 index
+
+That will barf out the current configuration
+<alsa_output.pci-0000_00_1f.3.hdmi-stereo>
+
+then sudo vim /etc/pulse/default.pa
+on the last line Make Some Devices Default
+paste the above line in there without the < > brackets
+
+set-default-sink alsa_output.pci-0000_00_1f.3.hdmi-stereo
+
+That will make the sound setting persistent after reboot. 

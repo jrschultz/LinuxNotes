@@ -1,0 +1,5 @@
+Dialout Group for Linux Serial Port
+
+sudo adduser jason dialout
+
+

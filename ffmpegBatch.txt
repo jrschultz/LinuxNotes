@@ -8,3 +8,16 @@ for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done
 for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done && rm *.ogg
 
 
+
+for i in *.flac; do ffmpeg -i "$i" "${i%.*}.mp3"; done && rm *.flac
+
+for i in *.webm; do ffmpeg -i "$i" "${i%.*}.mp3"; done
+
+
+
+for i in *.flac; do ffmpeg -i "$i" "${i%.*}.opus"; done
+
+
+for i in *.webm; do mv -i "$i" "${i%.*}.opus"; done
+
+for i in *.jpg; do convert "$i" "${i%.*}.webp"; done

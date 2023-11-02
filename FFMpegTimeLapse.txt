@@ -1,0 +1,2 @@
+ffmpeg -framerate 25 -pattern_type glob -i "*.jpg" 20220410.mp4
+

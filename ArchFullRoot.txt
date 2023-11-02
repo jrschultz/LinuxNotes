@@ -1,0 +1,12 @@
+Problem happens when there are too many old cached versions of programs.
+
+Check how many cached versions:
+sudo ls /var/cache/pacman/pkg/ | wc -l
+
+Check disk space usage:
+du -sh /var/cache/pacman/pkg/
+
+Delete all the old crap:
+sudo pacman -Sc
+
+

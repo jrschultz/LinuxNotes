@@ -5,3 +5,5 @@ Example:
 mogrify -path resized/ -quality 60% *.jpeg
 
 mogrify -path resized/ -resize 1920x *.png (resizes to 1920px wide, horizontal is proportional)
+
+mogrify -path resized/ -resize 1920x *.jpg

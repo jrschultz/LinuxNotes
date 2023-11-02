@@ -1,0 +1,30 @@
+Samba Setup
+1) Add User to the Samba User List, password must be the same as linux login
+sudo smbpasswd -a USERNAME
+2) Make the directory you want to share and then change its permissions
+sudo chmod 775 /SHAREDFOLDER
+3) Edit the samba config file and add the info for the folder you want to share
+sudo nano /etc/samba/smb.conf
+Scroll to the bottom
+[SHAREDFOLDER]
+ path = /home/USER/SHAREDFOLDER
+ browseable = yes
+ read only = no
+ valid users = USER
+4) Check for any errors
+testparm /etc/samba/smb.conf
+
+Enable Samba daemon services:
+systemctl enable smb
+systemctl start smb
+
+Fedora Extra steps:
+# This is for SELinux stuff. It's extra permission controls for US Military grade security specs
+
+sudo setsebool -P samba_enable_home_dirs on
+sudo setsebool -P samba_export_all_ro 1
+
+
+
+
+
