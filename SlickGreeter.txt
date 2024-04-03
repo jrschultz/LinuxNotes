@@ -1,0 +1,21 @@
+sudo apt install slick-greeter
+
+edit /etc/lightdm/lightdm.conf
+
+Scroll down to [Seat:*]
+add/modify these lines
+greeter-session=slick-greeter
+greeter-hide-users=false
+
+
+# Add Custom Background #
+
+add /etc/lightdm/slick-greeter.conf
+
+To the file add this:
+
+[Greeter]
+draw-user-background=false
+background=/usr/share/backgrounds/morning.jpg
+
+'morning.jpg' is the background file name.

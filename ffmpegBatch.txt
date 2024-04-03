@@ -20,4 +20,8 @@ for i in *.flac; do ffmpeg -i "$i" "${i%.*}.opus"; done
 
 for i in *.webm; do mv -i "$i" "${i%.*}.opus"; done
 
+for i in *.webm; do mv -i "$i" "${i%.*}.opus"; done && rm *.webm
+
 for i in *.jpg; do convert "$i" "${i%.*}.webp"; done
+
+for i in *.jpg; do convert "$i" "${i%.*}.pdf"; done
