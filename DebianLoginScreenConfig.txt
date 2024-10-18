@@ -1,0 +1,30 @@
+Set Users to automatically be shown
+
+sudo vim /etc/lightdm/lightdm.conf
+Scroll down to [Seat] area and uncomment (#) this
+greeter-hide-users=false
+
+
+Customize the Greeter
+
+cd /etc/lightdm
+
+sudo vim lighted-gtk-greeter.conf
+
+make changes 
+
+Switch to linux mint style slick greeter:
+edit/uncomment greeter-session=lightdm-slick-greeter
+
+background=path to file with no quotation marks
+
+etc 
+
+Fix the user automatically showing up
+sudo nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
+and place the following into this file:
+[SeatDefaults]
+greeter-hide-users=false
+
+
+

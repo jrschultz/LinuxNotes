@@ -1,0 +1,11 @@
+Dialout Group for Linux Serial Port
+
+Debian
+sudo adduser jason dialout
+
+Arch
+sudo usermod -a -G uucp $USER
+
+
+
+

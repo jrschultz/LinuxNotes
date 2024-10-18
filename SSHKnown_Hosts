@@ -1,0 +1,6 @@
+If you need to remove a host from the hashed known_hosts file
+ssh-keygen -R 172.16.1.109
+
+just put in the IP address of the host machine you want to remove.
+
+

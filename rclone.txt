@@ -1,0 +1,20 @@
+[ELC]
+scope = drive
+token = {"access_token":"ya29.a0ARrdaM8DfqihZINutXwJsCwx4DyeRxGlhXqmWVzWlh24cQpRsaqVC6YKgDYAOUHbNNx9w4RVieQBTR_LzdZkEFIgFbptFGWIAV52CvA09tl9e1A8GicOhexZWHThAiN1HwKpzcjKcOkSCOqpP-BT2u0n09KA","token_type":"Bearer","refresh_token":"1//04xwKZFrde45SCgYIARAAGAQSNwF-L9Ir245-d561Oj4o-uvTZeFKUFT4m6ddApfaNSVKi_iuloQvjRTGffqR-8vOkFRZka9qUSo","expiry":"2021-09-07T16:45:26.452314151-06:00"}
+
+Commands:
+
+rclone copy is like copying with rsync.  It includes the trailing / behind a directory by default.
+
+rclone copy -P --max-age 24h 02-Hymns/ ELC:/02-ServicePlans/02-Slides/02-Hymns
+
+Mounting Locally:
+
+rclone mount --daemon ELC: /mnt/ELC
+Cloud source then where you want it mounted on your system
+
+Unmounting:
+
+fusermount -u /path/to/local/mount
+
+

@@ -1,0 +1,7 @@
+For adding directories to the PATH so the shell searches them for scripts and what not
+
+edit your .zshrc (or .bashrc) to include
+
+export PATH=/home/jason/Scripts:$PATH
+
+For a system-wide global setting, edit the /etc/profile the same way

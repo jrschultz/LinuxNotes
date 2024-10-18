@@ -1,0 +1,14 @@
+sudo apt-get install openssh-server
+
+Check the status:
+sudo systemctl status ssh
+
+sudo systemctl start ssh
+
+Enable At Boot:
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+Quit & Disable:
+sudo systemctl stop ssh
+sudo systemctl disable ssh

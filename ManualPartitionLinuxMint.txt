@@ -1,0 +1,70 @@
+This is for a UEFI setup [if Legacy, for the boot partition select msdos]
+
+Boot from USB install disk
+
+Launch the install linux mint program on the desktop
+
+Select: something else
+
+New partition table
+
+Click free space and the plus icon to add the partitions
+
+Create EFI system partition for boot 
+
+
+********
+**BOOT**
+********
+
+Create a new partition for the boot loader
+    For size: 512MB
+    Type: Primary
+    Location: Beginning
+    EFI System Partition [this option is the gpt of yesteryear]
+    
+
+**********
+**SYSTEM**
+**********
+
+Click on free space and the plus icon to add the root (system) partition
+    For size: 30-50GB is lots 45000MB
+    Type: Primary
+    Location: Beginning
+    EXT4 
+    Mount point: /
+
+********
+**SWAP**
+********
+
+Rule of thumb: Use 4GB for 8GB and less of RAM; Use half RAM amount for 8GB+ ex: 8GB Swap for 16GB RAM
+
+Click on free space and the plus icon to add the SWAP partition
+    For size: 4000MB
+    Type: Primary
+    Location: Beginning
+    Use as: swap area    
+    
+********
+**HOME**
+********
+
+Select rest of free space and plus icon to add the Home partition
+    Size: rest of space
+    Type: Primary
+    Location: Beginning
+    EXT4
+    Mount point: /home
+
+Choose Device for boot loader
+
+Click/Highlight the /dev/sda1 efi 512MB partition
+    From the drop down menu at the bottom “Device for boot loader installation:”
+    pick /dev/sda1
+
+Then click Install Now button
+
+Wee! #comfy 
+

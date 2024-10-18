@@ -1,0 +1,6 @@
+Cat /proc/sys/vm/swappiness
+
+sudo vim /etc/sysctl.conf
+
+Scroll to the bottom and add
+vm.swappiness=10

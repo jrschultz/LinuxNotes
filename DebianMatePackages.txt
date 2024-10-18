@@ -1,0 +1,28 @@
+packages 
+arc-theme moka-icons-theme *arc icons ( download online ) mozo mate-tweak system-config-printer blueman gnome-disks-utility vlc uget brasero rhythmbox gthumb caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-wallpaper lightdm-gtk-greeter-settings gdebi screenfetch tilda mate-applet-brisk-menu gnome-system-tools or mate-system-tools
+
+
+arc-theme
+moka-icons-theme
+*arc icons  (  download online )
+mozo
+mate-tweak
+system-config-printer
+blueman
+gnome-disk-utility
+vlc
+uget
+brasero
+rhythmbox
+gthumb
+caja-gksu
+caja-image-converter
+caja-open-terminal
+caja-sendto
+caja-wallpaper
+lightdm-gtk-greeter-settings
+gdebi
+screenfetch
+tilda
+mate-applet-brisk-menu
+gnome-system-tools  or mate-system-tools

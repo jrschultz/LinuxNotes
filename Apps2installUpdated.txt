@@ -1,0 +1,36 @@
+Apps 2 Install - October 2022
+
+
+Essentials:
+===========
+
+nvim emacs rsync curl git pandoc texlive-full texlive-lang-all texlive-luatex texlive-xetex texlive-fonts-extra zsh ranger  gparted openssh-server htop neofetch kdeconnect Musescore3 handbrake vlc mpv ffmpeg samba gnome-disk-utility gimp hunspell-en-ca audacity htop filezilla wine warpinator
+
+Fonts:
+======
+
+ttf-mscorefonts-installer fonts-sil-gentium  
+
+FlatPaks:
+=========
+
+BraveBrowser
+Chromium
+Bitwarden
+K3B
+BalenaEtcher
+shotcut
+inkscape
+video trimmer
+keepassxc
+libreoffice
+
+Other sources:
+==============
+Spacemacs
+OhMyZsh
+ytdlp
+kindle (wine)
+makemkv
+Imaginary Teleprompter
+Image-Magick

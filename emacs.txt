@@ -1,0 +1,15 @@
+Emacs Mode info
+
+These modes are M-x
+
+toggle-truncate-lines This is like line wrap. 
+toggle-input-method this is switching between english and greek very fast pick ibycus4 greek
+visual-line-mode Makes little indicators of the next line show up
+
+M-RET T V - toggles space-doc-mode, hides formatting 
+
+Find and Replace
+M-% enter search string, enter replacement string, ! to replace in the whole document
+
+Export a File to PDF
+SPC m e e 

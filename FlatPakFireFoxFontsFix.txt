@@ -1,0 +1,9 @@
+To Fix the pixelated fonts do the following. The fontconfig directory didn't exist when I did it.
+
+Apparently adding this to ~/.var/app/org.mozilla.firefox/config/fontconfig/fonts.conf helps:
+
+
+<?xml version='1.0'?> <!DOCTYPE fontconfig SYSTEM 'fonts.dtd'> <fontconfig>     <!-- Disable bitmap fonts. -->     <selectfont><rejectfont><pattern>         <patelt name="scalable"><bool>false</bool></patelt>     </pattern></rejectfont></selectfont> </fontconfig> 
+
+
+Sauce: https://bugzilla.mozilla.org/show_bug.cgi?id=1621915

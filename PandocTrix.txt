@@ -1,0 +1,15 @@
+pandoc PDF creation
+pandoc -s -V geometry:margin=.5in -o SermonTemplate.pdf SermonTemplate.rmd
+you need another -V for each new variable or option you add
+
+Pandoc with Custom .PDF Template
+pandoc -s --template="my_template.latex" -o my_document.pdf my_document.md
+Pandoc Default Templates Area
+/usr/local/Cellar/pandoc/2.2.2.1/share/x86_64-osx-ghc-8.4.3/pandoc-2.2.2.1/data/templates
+pandoc test.txt —bibliography testlibrary.bib --smart --normalize -s -o outputfilename.PDF 
+————————
+pandoc -s KTCACGuide.rmd -V geometry:margin=.5in --variable mainfont="Palatino" --variable sansfont="Helvetica" --variable monofont="Menlo" --variable fontsize=12pt -o KTCACGuide.pdf
+
+Basic Syntax
+
+pandoc -s [input file] -o [output file]

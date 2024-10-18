@@ -1,0 +1,14 @@
+ENC
+Equalize
+Bass & Treble boost
+
+Normalize (Amplify)
+-3.0 dB
+
+Compress
+
+Threshold: -30
+Noise Floor: -50
+Ratio: 5:1
+Attack Time: .10sec
+Release Time: 1.0

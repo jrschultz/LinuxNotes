@@ -1,0 +1,34 @@
+1. Update
+2. Include the Non-Free sources
+Edit /etc/apt/sources.list file and add contrib non-free at the end of each line
+2. Switch the Software Sources to Local Mirrors for faster downloads
+3. Adjust Swappiness
+    cat /proc/sys/vm/swappiness - should be 60 by default
+    •    sudo vim /etc/sysctl.conf
+    •    scroll to the end add vm.swappiness=10
+4. Reduce SSD Writes
+    sudo vim /etc/fstab
+    •    add noatime in the options column before errors, remount…
+    Check if Trim is Enabled: 
+    systemctl status fstrim
+    Enable trim on DEBIAN 
+sudo cp /usr/share/doc/util-linux/examples/fstrim.service /etc/systemd/system
+sudo cp /usr/share/doc/util-linux/examples/fstrim.timer /etc/systemd/system
+sudo systemctl enable fstrim.timer
+
+Run it Manually: sudo fstrim -va
+
+    Start it:
+    sudo systemctl start fstrim.timer
+5. Fast Boot:
+    sudo vim /etc/default/grub
+    edit the GRUB_TIMEOUT=0
+    then run sudo update-grub
+5. Enable Drive Cache:
+    Disks> Select main hard drive> hamburger menu on right> Drive Settings> Write Cache> Enable
+6. Enable WiFi:
+sudo apt install firmware-iwlwifi
+6. Enable Firewall:
+    Add rule for SSH
+8. Install Packages
+arc-theme moka-icon-theme *arc icons ( download online ) mozo mate-tweak system-config-printer blueman gnome-disks-utility vlc uget brasero rhythmbox gthumb caja-gksu caja-image-converter caja-open-terminal caja-sendto caja-wallpaper lightdm-gtk-greeter-settings gdebi screenfetch tilda mate-applet-brisk-menu gnome-system-tools or mate-system-tools vim rsync pandoc gparted openssh-server imagemagick ttf-mscorefonts-installer pandoc hwinfo python-pip (youtube-dl) plank

@@ -1,0 +1,9 @@
+# To get hunspell canadian locales to work with Atom editor spell checking
+
+sudo apt install hunspell-en-ca
+
+this installs the dictionary files into /usr/share/hunspell
+Then just update the spell-check package in Atom to use locale en_CA
+
+#Comfy
+

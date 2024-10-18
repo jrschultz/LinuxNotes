@@ -1,0 +1,7 @@
+Install the brother driver as per the support instructions.
+
+Then do this:
+sudo usermod -G scanner -a jason
+sudo gpasswd -a jason scanner
+
+This adds the user to the scanner group and viola!

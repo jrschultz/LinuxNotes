@@ -1,0 +1,17 @@
+Hardening the Server against SSH attacks
+
+sudo vim /etc/ssh/sshd_config
+
+find 
+PermitRootLogin no
+
+add anywhere in the file:
+AllowUsers jason 
+
+Also can ban password logins over ssh
+find
+PasswordAuthentication no 
+* NOTE: this option will make it impossible to add new SSH keys from new clients to the server
+
+save the file and sudo systemctl restart ssh 
+

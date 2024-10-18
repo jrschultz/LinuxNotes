@@ -1,0 +1,33 @@
+Re: VLC and Banshee Player has GREEN screen!
+Quote
+Post Tue Jul 23, 2013 5:31 pm
+ Solved! 
+I unchecked Hardware accelleration in VLC Player and now I am able to view Videos without a GREEN screen!
+Below is a Google search swiped from a different forum which proved to be the answer and solution.
+Apparently MINT 15`s default video drivers for the integrated video on my Haswell i7-4770K are not yet up to snuff?
+
+(begin quote) 
+While the root of the problem is likely hidden in your video drivers, a quick fix is to just disable hardware acceleration in Flash. You might experience a slight decrease in performance, but you'll actually get video working again without going to too much trouble.
+
+In VLC Media Player:
+
+Click on Tools --> Preferences
+
+Click on the Video tab
+
+Uncheck the "Accelerated video output (Ovelay) box.
+
+Save these settings and it should work immediately.
+
+For Youtube videos you could do this:
+
+1) Right click on youtube video.
+
+2) Go to settings.
+
+3) UNCHECK the 'Enable hardware acceleration' tickbox.
+
+4) Refeshed and works fine now.
+
+I also recommend you to install/reinstall your video/display drive
+(end quote)

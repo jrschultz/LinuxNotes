@@ -1,0 +1,11 @@
+## Insert USB drive                                                              
+          1. type `lsblk` to list all drives on the computer                               
+          2. **IMPORTANT** note which drive is your USB (ex: sdb)                          
+          3. type `sudo su` to become root                                                 
+          4. type `dd if=Downloads/archlinux-2018-2018.08.01-x86_64.iso of=/dev/sdb        
+          status="progress"`                                                               
+          +  (The `dd` command copies the ISO to the USB drive, `if` is input location,    
+          `of` is output location)                                                         
+          + **CRITICAL!!!** to ensure output location is your USB and not a working        
+          drive. dd will destroy the output location!                                      
+          5. When done, it is safe to reboot computer. Type `sudo reboot -now` 

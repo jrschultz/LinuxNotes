@@ -1,0 +1,27 @@
+#Convert from ogg to m4a in a folder
+
+for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done
+
+
+#Convert and delete original
+
+for i in *.ogg; do ffmpeg -i "$i" "${i%.*}.m4a"; done && rm *.ogg
+
+
+
+for i in *.flac; do ffmpeg -i "$i" "${i%.*}.mp3"; done && rm *.flac
+
+for i in *.webm; do ffmpeg -i "$i" "${i%.*}.mp3"; done
+
+
+
+for i in *.flac; do ffmpeg -i "$i" "${i%.*}.opus"; done
+
+
+for i in *.webm; do mv -i "$i" "${i%.*}.opus"; done
+
+for i in *.webm; do mv -i "$i" "${i%.*}.opus"; done && rm *.webm
+
+for i in *.jpg; do convert "$i" "${i%.*}.webp"; done
+
+for i in *.jpg; do convert "$i" "${i%.*}.pdf"; done

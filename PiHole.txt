@@ -1,0 +1,3 @@
+Update the pi:
+
+ssh in and run pihole

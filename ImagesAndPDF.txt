@@ -1,0 +1,10 @@
+PDF to Images:
+pdftoppm -png -rx 300 -ry 300 updatedvalues.pdf document
+
+This is 300 DPI resolution
+png can be jpg or whatever
+
+Images to PDF:
+img2pdf *.png -o ShopInsurance.pdf
+
+

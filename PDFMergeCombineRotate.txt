@@ -1,0 +1,13 @@
+To merge or combine PDFs, just install pdftk. 
+
+Then it's just: pdftk PDF1.pdf PDF2.pdf cat output PDF3.pdf
+
+To rotate PDFS:
+
+pdftk input.pdf cat 1-endeast output output.pdf
+
+pdftk input.pdf cat 1-endwest output output.pdf
+
+
+
+

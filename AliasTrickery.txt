@@ -1,0 +1,27 @@
+You can customize any commands with an alias:
+
+alias LL=‘ls -l’ 
+Or
+alias server=‘ssh server@192.168’
+
+Make it permanent:
+Add to ~/.bashrc
+Make system wide:
+Sudo vim /etc/bash.bashrc
+
+List available Aliases:
+alias
+
+** sudo source ~/.bashrc to make the changes take effect
+
+OR exec bash
+
+
+OS X Terminal Aliases:
+
+vim ~/.bash_profile
+
+After adding aliases, then 
+source ~/.bash_profile
+
+And viola!

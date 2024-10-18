@@ -1,0 +1,2 @@
+convert -trim <FILENAME> <OUTPUTFILENAME>
+convert -trim -transparent  white -fuzz 10% <FILENAME> <OUTPUTFILENAME>  Change color and percent to anything you need

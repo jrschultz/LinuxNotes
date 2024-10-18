@@ -1,0 +1,15 @@
+To make a bunch of files: 
+touch filename{0001..0009}.txt
+
+To use Thunar to Rename:
+Bulk Rename, Add the files
+
+For Photo Renaming: (like Lightroom MegaZ setting)
+Select Files in Thunar, then rename
+Choose Numbering > Number Format: 001, 002, 003
+Text Format: Text-Number > Add desired text in the box right of text format
+Rename the Files
+To add the Date, reselect the same files, rename
+Insert Date/Time > Date Modified, Format %Y%m%d at position 0 from the front(left)
+ 
+Done

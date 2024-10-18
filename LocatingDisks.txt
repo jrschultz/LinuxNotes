@@ -1,0 +1,5 @@
+To list all connected devices:  lsblk
+
+To get details about them specifically: blkid /dev/sdb1 
+
+To get serial numbers of disks: sudo hdparm -i /dev/sdb

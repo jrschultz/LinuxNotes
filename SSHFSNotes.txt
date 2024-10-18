@@ -1,0 +1,10 @@
+This is for mounting a network folder via SSH instead of SAMBA
+
+Mount:
+sshfs [NETWORK/PATH] [LOCAL/MOUNTPOINT]
+
+Unmount:
+fusermount -u [LOCAL/MOUNTPOINT]
+
+Example:
+sshfs jason@192.168.50.132:/jcloud/Media/Music ~/netmus

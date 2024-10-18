@@ -1,0 +1,3 @@
+After making additions to the bashrc or bash_profile type the following to make the changes take effect:
+
+$ source ~/.bashrc

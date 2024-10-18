@@ -1,0 +1,20 @@
+sudo fallocate -l 1Gb /swapfile
+
+for F2FS or XFS: sudo dd if=/dev/zero of=/swapfile bs=1M count=512 
+
+sudo chmod 600 /swapfile 
+
+sudo mkswap /swapfile 
+
+sudo swapon /swapfile 
+
+add to /etc/fstab the line /swapfile none swap defaults 0 0 
+
+sudo nano /etc/fstab 
+
+Remove swap file: 
+
+swapoff -a 
+rm -f /swapfile 
+
+If you want to remove a swap file completely, remove the relevant entry from /etc/fstab.

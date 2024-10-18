@@ -1,0 +1,12 @@
+Sudo ufw allow 22  ... this allows SSH 
+
+sudo ufw status numbered ... see what ports are open
+
+Sudo ufw delete 2 .. deletes the rules by number 
+
+Allow port 22 by IP address
+sudo ufw allow from 192.168.50.72 proto tcp to any port 22
+
+Then go back and delete the general allow port 22
+
+sudo ufw reset ... resets all defaults 

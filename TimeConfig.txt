@@ -1,0 +1,5 @@
+%a %b %d %-I:%M %p
+
+Day Month Date Hour Minute AM/PM
+
+Use - to stop leading the zeros. %-I

@@ -1,0 +1,8 @@
+# Install Most
+sudo nala install Most
+
+# Add this to the .zshrc
+
+# Coloured Man Pages
+export PAGER=most
+

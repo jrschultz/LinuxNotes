@@ -1,0 +1,5 @@
+If the power_save and power_save_controller values are reset after reboot, instead of installing tlp, if your distro uses alsa you should be able to fix the issue directly by modifying the following conf file: /etc/modprobe.d/alsa-base.conf
+
+Open file in console using: sudo nano /etc/modprobe.d/alsa-base.conf
+
+Add the following line to the end of the file: options snd-hda-intel power_save=0 power_save_controller=N

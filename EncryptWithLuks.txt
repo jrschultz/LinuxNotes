@@ -1,0 +1,29 @@
+sudo apt install cryptsetup 
+
+sudo cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb1 
+
+sudo cryptsetup luksOpen /dev/sdb1 sdb1 
+
+sudo fdisk -l 
+
+sudo mkfs.ext4 /dev/mapper/sdb1 
+
+sudo tune2fs -m 0 /dev/mapper/sdb1 
+
+sudo mkdir /mnt/encrypted 
+
+sudo mount /dev/mapper/sdb1 /mnt/encrypted 
+
+sudo touch /mnt/encrypted/test.txt 
+
+sudo chown -R `whoami`:users /mnt/encrypted 
+
+sudo umount /dev/mapper/sdb1 
+
+sudo cryptsetup luksClose sdb1 lsblk 
+
+sudo cryptsetup luksOpen /dev/sdb1 sdb1 
+
+sudo mount /dev/mapper/sdb1 /mnt/encrypted 
+
+sudo umount /dev/mapper/sdb1 sudo cryptsetup luksClose sdb1

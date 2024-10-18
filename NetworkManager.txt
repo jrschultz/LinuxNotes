@@ -1,0 +1,8 @@
+I think the applet should be in the network-manager-gnome package. If you don't have it run:
+sudo apt-get install network-manager-gnome
+Also make sure the network manager service is running. You can check with:
+systemctl list-units NetworkManager.service
+If it's not loaded you should either start it with:
+sudo systemctl start NetworkManager.service
+or enable so it will also be there after restarting with:
+sudo systemctl enable NetworkManager.service

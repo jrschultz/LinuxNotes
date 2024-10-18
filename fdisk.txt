@@ -1,0 +1,12 @@
+# Use fdisk to configure partitions
+disk /dev/sdX - where X is the identifier of the drive/device
+
+* p print out current partitions
+* d delete any partitions
+* n create a new partition
+* 1 for primary number
+* specify size +200MB or +12GB or whatever
+* remove signatures from previous if asked
+* p again to see list of partitions
+* w to write the changes
+For some reason, Linux drives should have a 4096MB mini partition formatted to FAT32, Primary Partition. 

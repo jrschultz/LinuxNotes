@@ -1,0 +1,46 @@
+After Installing Linux Mint
+1.	Configure Update Manager to use local mirrors
+•	Update Manager> Edit> Software Source>
+2.	Install Microcode
+•	Synaptic Package Manager> Search Microcode> Install/Apply
+3.	Decrease Swappiness
+•	cat /proc/sys/vm/swappiness - should be 60 by default
+•	sudo vim /etc/sysctl.conf
+•	scroll to the end add vm.swappiness=10
+4.	Enable drive cache
+•	Disks> Select main hard drive> hamburger menu on right> Drive Settings> Write Cache> Enable
+5.	Reduce SSD Writes
+•	sudo vim /etc/fstab
+•	add noatime in the options column before errors, remount…
+Check if Trim is Enabled: 
+systemctl status fstrim
+Enable it (Mint/Ubuntu/Manjaro)
+sudo systemctl enable fstrim.timer
+
+    cat/etc/cron.weekly.fstrim
+
+•	enable trim on DEBIAN 
+sudo cp /usr/share/doc/util-linux/examples/fstrim.service /etc/systemd/system
+sudo cp /usr/share/doc/util-linux/examples/fstrim.timer /etc/systemd/system
+sudo systemctl enable fstrim.timer
+
+Run it Manually: sudo fstrim -va
+
+sudo systemctl start fstrim.timer
+6.	Firewall
+7.	Microsoft Fonts
+•	Software manager> mscorefonts> install
+8.	Tweak Firefox to use DuckDuckGo
+9.	Disable Java in LibreOffice
+•	Tools> Options> Advanced> Disable Java Runtime
+10.Bypass Grub Bootloader wait time
+sudo vim /etc/default/grub
+edit the GRUB_TIMEOUT=0
+then run sudo update-grub
+~ 20 second boot time in LMDE
+
+Wifi Drivers on Debian:
+add all the contrib non free stuff to the sources list
+then sudo apt install firmware-iwlwifi
+This is for intel chipsets 
+

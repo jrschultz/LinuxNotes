@@ -1,0 +1,1 @@
+For manually installing fonts, download and sudo copy to /usr/share/fonts 
