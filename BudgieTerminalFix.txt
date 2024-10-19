@@ -1,0 +1,7 @@
+This fix is for Budgie on an Arch base. The right-click/context menu in nemo "Open in Terminal" doesn't work. Do this:
+
+gsettings set org.cinnamon.desktop.default-applications.terminal exec /usr/bin/mate-terminal 
+
+or whatever terminal emulator you want like kitty
+
+
