@@ -1,0 +1,43 @@
+### Setup NFS Network Shares
+
+## On Server - Debian package name. [nfs-utils on Arch]
+
+sudo apt install nfs-kernel-server
+
+Edit /etc/exports file to add the folder you want to share
+
+Make sure share folder is 775 permissions 
+
+/path/to/SharingFolder (rw,sync,no_subtree_check) 
+
+Note: this will be an "open" share in that everyone with the client setup can connect to the share. You can specify the ip address of the connecting client along with subnet mask to lock it down a bit. For home network it doesn't matter.
+
+Then run
+
+sudo systemctl restart nfs-kernel-server
+
+## On Client
+
+sudo apt install nfs-common
+
+Check to make sure the server is actually serving: 
+
+showmount --exports [SERVER IP ADDRESS]
+
+Make a directory to mount the shared folder to:
+
+mkdir /path/to/MountFolder 
+
+sudo mount [SERVER IP ADDRESS:/path/to/SharingFolder] /path/to/MountFolder
+
+See if it worked by running df -h
+
+You should see the Server Sharing Folder mounted locally on the client machine
+
+To unmount it on the client:
+
+sudo umount /path/to/MountFolder
+
+### Auto Mounting can be done with AutoFS 
+
+Consult the LearnLinuxTV video
