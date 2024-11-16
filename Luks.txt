@@ -1,0 +1,56 @@
+## Luks Setup
+
+### Install cryptsetup from repo
+
+sudo su to become root
+
+cryptsetup luksFormat /dev/DRIVEPARTITON ex: /dev/sdd1
+
+Takes a minute.
+
+cryptsetup open /dev/sdd1 TITLE - where title is whatever you want to call it
+
+cryptsetup open /dev/sdd1 mercury 
+
+Then type the password to decrypt
+
+check it with lsblk. Should see:
+
+sdd           8:48   0   447G  0 disk  
+└─sdd1        8:49   0   447G  0 part  
+  └─mercury 254:0    0   447G  0 crypt 
+
+
+### Make a File System for it
+
+Next you need to make a file system for the encrypted volume
+
+mkfs.ext4 /dev/mapper/TITLE - where title is the name
+
+mkfs.ext4 /dev/mapper/mercury
+
+### Mount the Drive
+
+Next you can actually mount the encrypted drive
+
+mount /dev/mapper/mercury /mnt/mercury
+
+It will be owned by root so you can chown it to the user.
+
+### Unmount and Close
+
+When done with the encrypted drive, unmount it:
+
+sudo umount /dev/mapper/mercury
+
+sudo cryptsetup close mercury
+
+### Ongoing usage after the initial setup:
+
+sudo cryptsetup open /dev/sdd1 mercury
+
+sudo mount /dev/mapper/mercury /mnt/mercury
+
+sudo umount /dev/mapper/mercury
+
+sudo cryptsetup close mercury
