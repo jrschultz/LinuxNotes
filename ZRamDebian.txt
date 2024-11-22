@@ -1,0 +1,25 @@
+## Install and Config ZRam on Debian
+
+sudo apt install zram-tools systemd-zram-generator 
+
+Edit the /etc/FSTab file and comment (#) out the swap line. Save and quit.
+
+Note: SystemD will continue to load the existing swap even with the comment out on the FSTab so you need to shut that off:
+
+systemctl --type swap 
+
+sudo systemctl mask  "dev-*.swap"
+
+Edit /etc/default/zramswap
+
+Uncomment the speed algorithm (ALGO=lz4) and uncomment the PERCENT line & set it for 25%
+
+Uncomment the PRIORITY and leave it at 100
+
+sudo zramswap start
+
+sudo zramctl
+
+reboot
+
+
