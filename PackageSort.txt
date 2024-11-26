@@ -1,0 +1,9 @@
+# This is for when you have a list of packages you want to install via a script. You can add stuff concurrently on one line (like you need it for installing) and then use this command to sort them all alphabetically. This makes it easier to find the packages visually.
+
+cat list | xargs -n 1 | sort | tr '\n' ' '
+
+example: 'sudo apt install leonard kite dingle broseph' saved in the file 'list'
+
+output: apt broseph dingle kite leonard
+
+
