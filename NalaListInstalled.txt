@@ -1,0 +1,11 @@
+# Use Nala to list Nala installed packages (aka user installed):
+
+nala list -N | awk '{print $1}' > listtt 
+
+# Then get an alphabeticallized concurrent list:
+
+cat listtt | xargs -n 1 | sort | tr '\n' ' '
+
+# Also for Flatpaks:
+
+flatpak list | awk '{print$1}'
