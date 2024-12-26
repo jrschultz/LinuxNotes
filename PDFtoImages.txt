@@ -6,7 +6,7 @@ This is 300 DPI resolution
 png can be jpg or whatever
 
 Images to PDF:
-img2pdf *.png ShopInsurance.pdf
+img2pdf *.png --output ShopInsurance.pdf
 
 Batch:
 The Default Resolution is 150
