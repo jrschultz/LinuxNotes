@@ -1,0 +1,5 @@
+In FlatSeal add:
+
+Environment>Variables> CURSOR_THEME=Breeze
+
+or specify whichever theme you use

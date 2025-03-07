@@ -1,0 +1,5 @@
+Use GhostScript to shrink down resolution of a PDF
+
+use tldr gs for more options. This took a 112MB file down to 2.6MB
+
+gs -dNOPAUSE -dQUIET -dBATCH -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -sOutputFile=Corrections150.pdf ELCProofCorrectionsREAL.pdf
