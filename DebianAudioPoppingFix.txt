@@ -1,0 +1,21 @@
+sudo nvim /sys/module/snd_hda_intel/parameters/power_save
+
+swap out 1 for 0
+
+sudo nvim /sys/module/snd_hda_intel/parameters/power_save_controller
+
+swap out N for Y
+
+If using TLP for laptops,
+
+sudo nvim /etc/default/tlp
+
+scroll down to SOUND_POWER_SAVE_ON_BAT=0
+
+Make these zeros
+
+Also
+
+SOUND_POWER_SAVE_CONTROLLER=N
+
+Save and Exit
