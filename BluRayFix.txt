@@ -1,0 +1,11 @@
+Make the BluRay drive work:
+
+lsmod | grep sr_mod
+
+if it's listed, the module is active.
+
+If not, load it:
+
+sudo modprobe sr_mod
+
+
