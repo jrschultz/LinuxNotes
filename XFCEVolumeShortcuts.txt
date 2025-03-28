@@ -1,0 +1,5 @@
+amixer -D pulse set Master 5%+     --> (Volume Up)
+amixer -D pulse set Master 5%-     --> (Volume Down)
+amixer -D pulse set Master toggle  --> (Mute/Unmute)
+
+Map these commands to keyboard shortcuts
