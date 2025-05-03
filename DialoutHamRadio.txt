@@ -3,6 +3,9 @@ Dialout Group for Linux Serial Port
 Debian
 sudo adduser jason dialout
 
+Fedora
+sudo usermod -aG dialout <username>
+
 Arch
 sudo usermod -a -G uucp $USER
 

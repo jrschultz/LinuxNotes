@@ -32,7 +32,7 @@ sudo dnf5 upgrade
 
 ## Install Gnome Tweaks
 
-sudo dnf5 gnome-tweaks
+sudo dnf5 install gnome-tweaks
 
 ## Enable Flathub for Flatpaks
 
