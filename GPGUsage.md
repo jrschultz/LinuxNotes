@@ -116,7 +116,7 @@ echo "This is my secret message" | gpg --encrypt --armor --recipient B1C2D3E4F5G
 
 + Use the echo command to type your message
 + Pipe it to GPG recipient 
-+ > exports it to a an encrypted file
++ ```>``` exports it to a an encrypted file
 
 ## Decrypting Data
 
