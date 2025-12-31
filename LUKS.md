@@ -62,6 +62,8 @@ mkfs.ext4 /dev/mapper/cuda2tb
 mount /dev/mapper/cuda2tb /mnt/cuda2tb
 ```
 
+This will be owned by root so you can chown it to your user.
+
 You can now copy or create data on the encrypted partition as per any other hard drive.
 
 ## Unmount and Close Procedure
