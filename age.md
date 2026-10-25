@@ -1,8 +1,8 @@
 **age** (Actually Good Encryption) is a simple, modern, and secure file encryption tool. It uses small explicit keys, has almost no options to get wrong, and works well with Unix pipes. Official site: [age-encryption.org](age-encryption.org).
 
-# KEY GENERATION
+# 🪄 KEY GENERATION
 
-### Classic X25519 key (recommended for most use)
+### ✅ Classic X25519 key (recommended for most use)
 ```bash
 age-keygen -o key.txt
 ```
@@ -10,7 +10,7 @@ age-keygen -o key.txt
 Ex: Public key: age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
 
 
-### Post-quantum hybrid (ML-KEM-768 + X25519) — recommended for long-term security
+### 🐈‍⬛ Post-quantum hybrid (ML-KEM-768 + X25519) — recommended for long-term security
 ```bash
 age-keygen -pq -o key.txt
 ```
@@ -29,9 +29,9 @@ age-keygen | age -p > key.age
 
 Keep the private key (AGE-SECRET-KEY-...) secret. Share only the public key (age1... or age1pq1...).
 
-# BASIC USAGE
+# 🔐 BASIC USAGE
 
-## Symmetric Encryption (No Keys Needed)
+## 🔓 Symmetric Encryption (No Keys Needed)
 
 ### Encrypt (leave empty to auto-generate a strong passphrase)
 ```bash
@@ -43,7 +43,7 @@ age -p -o secrets.txt.age secrets.txt
 age -d -o secrets.txt secrets.txt.age
 ```
 
-## Asymmetric Encryption (Public Key Encryption)
+## 🔑🔑 Asymmetric Encryption (Public Key Encryption)
 
 ### Encrypt to one recipient
 ``` bash
@@ -77,7 +77,7 @@ age -a -r age1... -o message.age message.txt
 age -a -p < message.txt
 ```
 
-## SSH Keys
+## 🤫 SSH Keys
 
 SSH keys work (ssh-ed25519 and ssh-rsa ≥ 2048), but native age keys are preferred (smaller, better privacy, post-quantum available). ssh-agent is not supported.
 
@@ -97,9 +97,9 @@ age -d -i ~/.ssh/id_ed25519 -o file.txt file.age
 curl https://github.com/username.keys | age -R - -o file.age file.txt
 ```
 
-# COMMON OPTIONS
+# ⚙️ COMMON OPTIONS
 
-Flag	Description
+**Flag**	**Description**
 -e / --encrypt	Encrypt (default)
 -d / --decrypt	Decrypt
 -o FILE	Write output to file (default: stdout)
