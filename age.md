@@ -99,13 +99,14 @@ curl https://github.com/username.keys | age -R - -o file.age file.txt
 
 # ⚙️ COMMON OPTIONS
 
-**Flag**	**Description**
--e / --encrypt	Encrypt (default)
--d / --decrypt	Decrypt
--o FILE	Write output to file (default: stdout)
--a / --armor	ASCII-armored output
--p / --passphrase	Encrypt with a passphrase
--r RECIPIENT	Encrypt to a public key (repeatable)
--R FILE	Read recipients from a file
--i FILE	Identity (private key) file for decryption
+| **Flag** | **Description** |
+| -------- | --------------- |
+| -e / --encrypt | Encrypt (default) |
+| -d / --decrypt | Decrypt |
+| -o FILE | Write output to file (default: stdout) |
+| -a / --armor | ASCII-armored output |
+| -p / --passphrase | Encrypt with a passphrase |
+| -r RECIPIENT | Encrypt to a public key (repeatable) |
+| -R FILE | Read recipients from a file |
+| -i FILE | Identity (private key) file for decryption |
 
