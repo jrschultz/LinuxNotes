@@ -1,4 +1,4 @@
-# LUKS Setup for Full Drive Encryption
+# 🔐 LUKS Setup for Full Drive Encryption
 
 You need sudo/root to do the following steps
 

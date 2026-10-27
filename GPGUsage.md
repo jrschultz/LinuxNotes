@@ -1,4 +1,4 @@
-# GPG Guide
+# 🔐 GPG Guide
 
 GnuPG (GNU Privacy Guard) is an open-source implementation of the OpenPGP standard, used for secure communication and data protection.
 

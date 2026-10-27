@@ -1,3 +1,0 @@
-Install some fonts:
-sudo pacman -Syu $(sudo pacman -Ssq ttf-)
-

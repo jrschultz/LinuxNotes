@@ -1,4 +1,4 @@
-# Scanner fix in Debian 13 on
+# 📄 Scanner fix in Debian 13
 
 ### Brother DSmobile 620 Scanner
 

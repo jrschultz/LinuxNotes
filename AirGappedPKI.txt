@@ -1,3 +1,0 @@
-Stand alone computer with no network (capability) used only for encrypting/decrypting gpg messages.  Data is transferred via secure USB to networked machines for sending. 
-
-Public Key Infrastructure 

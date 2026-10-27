@@ -1,5 +1,0 @@
-# Install Locate
-sudo nala install mlocate
-
-# Update the database so locate can find stuff
-sudo updatedb.plocate

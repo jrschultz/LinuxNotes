@@ -1,5 +1,0 @@
-#To make libre office run a kiosk type thing:
-
-loimpress --show FILENAME.odp 
-
-

@@ -1,4 +1,4 @@
-Here's a **quick, practical tutorial** on the `tar` command in Linux.
+# 📁 Tar Tutorial
 
 ### What is `tar`?
 `tar` (Tape ARchive) is used to **create**, **extract**, and **manage** archive files (`.tar`, `.tar.gz`, `.tar.bz2`, etc.).
@@ -98,6 +98,7 @@ tar -c --use-compress-program="xz -T0" -vf archive.tar.xz folder/
 
 **Pro tip:**  
 On most modern Linux systems (Ubuntu, Fedora, etc.), you can just use:
+
 ```bash
 tar -xf filename.tar.*     # Extracts anything
 ```
