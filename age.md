@@ -29,6 +29,8 @@ age-keygen | age -p > key.age
 
 Keep the private key (AGE-SECRET-KEY-...) secret. Share only the public key (age1... or age1pq1...).
 
+---
+
 # 🔐 BASIC USAGE
 
 ## 🔓 Symmetric Encryption (No Keys Needed)
@@ -97,6 +99,31 @@ age -d -i ~/.ssh/id_ed25519 -o file.txt file.age
 curl https://github.com/username.keys | age -R - -o file.age file.txt
 ```
 
+---
+
+# 📁 Encrypted Archive with Tar
+Use this workflow for symmetrically encrypting a folder of files with Tar
+
+### Encrypt a Directory with a Passphrase
+
+```bash
+tar -czf - /path/to/your/folder | age -p -o folder.tar.gz.age
+```
+
+### Decrypt and Extract
+
+```bash
+age -d folder.tar.gz.age | tar -xzf -
+```
+
+### Extract to a Specified Location
+
+```bash
+mkdir restored && age -d folder.tar.gz.age | tar -xzf - -C restored
+```
+
+---
+
 # ⚙️ COMMON OPTIONS
 
 | **Flag** | **Description** |
@@ -109,4 +136,7 @@ curl https://github.com/username.keys | age -R - -o file.age file.txt
 | -r RECIPIENT | Encrypt to a public key (repeatable) |
 | -R FILE | Read recipients from a file |
 | -i FILE | Identity (private key) file for decryption |
+
+
+
 
